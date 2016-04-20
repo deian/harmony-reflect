@@ -1717,10 +1717,10 @@ Object.setPrototypeOf = function(target, newProto) {
       throw new TypeError("proxy rejected prototype mutation");
     }
   } else {
-    if (!Object_isExtensible(target)) {
-      throw new TypeError("can't set prototype on non-extensible object: " +
-                          target);
-    }
+    // if (!Object_isExtensible(target)) {
+    //   // throw new TypeError("can't set prototype on non-extensible object: " +
+    //   //                     target);
+    // }
     if (prim_setPrototypeOf)
       return prim_setPrototypeOf(target, newProto);
 
