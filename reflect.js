@@ -618,10 +618,10 @@ Validator.prototype = {
     var extensible = Object.isExtensible(this.target);
 
     if (desc === undefined) {
-      if (isSealedDesc(targetDesc)) {
-        throw new TypeError("cannot report non-configurable property '"+name+
-                            "' as non-existent");
-      }
+      // if (isSealedDesc(targetDesc)) {
+      //   throw new TypeError("cannot report non-configurable property '"+name+
+      //                       "' as non-existent");
+      // }
       if (!extensible && targetDesc !== undefined) {
           // if handler is allowed to return undefined, we cannot guarantee
           // that it will not return a descriptor for this property later.
